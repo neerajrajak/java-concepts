@@ -1,0 +1,30 @@
+-------------------------------
+Single Responsibility Principle
+--------------------------------
+
+The idea behind the SRP is that every class, module, or function in a program should have one responsibility/purpose in a program. 
+As a commonly used definition, "every class should have only one reason to change".
+
+Problem
+-------->
+	  In the BadBankService example we have this Bank Service performing multiple tasks 
+	 	- Banking Services like deposit or withdraw
+	 	- loan services like loan intrest
+	 	- notificaton service like send OTP
+	 	- print passbook related to transaction
+	 
+	 - In future if user wish to add one more loan intrest type like study loan he needs to make changes in this service
+	 - Similary if user wish to add more otp feature.
+	 
+	 - So this class contains multiple features and to change any one feature we need to modify this class again and again
+	  thus voilating single responsibility principle
+	  
+Solution
+--------->
+	- We have segregated service based on the functionality it is performing
+		- LoanService: for loan related functionality
+		- OtpService: for otp related functionality
+		- BankService: for banking related functionality
+		- PrinterService: for printing passbook related functionality
+	  
+	 

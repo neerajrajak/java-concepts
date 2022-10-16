@@ -1,0 +1,23 @@
+
+---------------------
+Open Close Principle
+---------------------
+
+	- The open-closed principle states that software entities should be open for extension, but closed for modification.
+	- This implies that such entities – classes, functions, and so on – should be created in a way that their core functionalities can be extended to 
+	 other entities without altering the initial entity's source code.
+	 
+	 Problem
+	 -------->
+	  
+	 - In BadOcpNotification class we have sendOtp method which accepts medium like email, sms, etc. and based on the medium
+	 	it performs operation accordingly
+	 - In future if user wants to add functionality related to whatsapp otp, it again needs to change the same class which voilates
+	 	closed for modification principle.
+	 	
+	 Solution
+	 -------->
+	 
+	 - To Solve above problem we have created an interface Notification Service
+	 - So in future any new otp related functionality needs to be added it will just create the new class and implement 
+	 	Notification interface and add its own implementation.

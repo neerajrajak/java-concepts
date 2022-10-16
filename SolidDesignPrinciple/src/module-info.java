@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author xxx
+ *
+ */
+module SolidDesignPrinciple {
+}
