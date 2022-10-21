@@ -1,0 +1,24 @@
+
+-------------------------------
+Dependency Inversion Principle
+-------------------------------
+
+High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
+Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
+
+Problem
+-------->
+
+	In our example of oldShopkeeper, he has implementation to allow customer to do payment via debit card only.
+	In case new customer needs to do payment with credit card he has no option since OldShopkeeper implementation
+	is tightly coupled to Debit Card Payment.
+	
+Solution
+--------->
+	Instead of relying on concrete class for payment we have BankCard interface and this interface 
+	is implemented in both debit card and credit card.
+	Now in ShoppingMall class we are not relying on specific card payment since based on the customer
+	payment method we are abstracting their payment method through bank payment and not tightly bound
+	to any one payment method.
+	In future if any new payment method arises we just need to implement BankCard interface into it and
+	rest will work accordingly.
