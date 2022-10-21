@@ -1,0 +1,19 @@
+
+---------------------------------
+Interface Segregation Principle
+---------------------------------
+
+The interface segregation principle states that the interface of a program should be split in a way that the 
+user/client would only have access to the necessary methods related to their needs.
+In short client should not be forced to implement methods which are not relevant to them.
+
+Problem
+-------->
+
+	In our example, UpiPayment interface contains methods to send and receive money from banks as well as wallets.
+	But Gpay doesn't support wallet related features so it is forced to implement those methods which is against ISP principle.
+	
+Solution
+--------->
+	We created two seperate interfaces one for bank payments and another for wallet payments.
+	So features supported by classes are implemented accordingly.
