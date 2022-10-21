@@ -1,0 +1,25 @@
+
+------------------------------
+Liskov Substitution Principle
+------------------------------
+
+The Liskov substitution principle simply implies that when an instance of a class is passed/extended to another class, 
+the inheriting class should have a use case for all the properties and behavior of the inherited class.
+
+Problem
+-------->
+	In the example of come.lsp.example package,
+	We have created an abstract class SocialMedia containing features to be implemented like
+		- publishing post
+		- chat with friends
+		- send photos and videos
+		- group videocall with friends
+	
+	While implementing those features we found that, even though instgram doesn't support group video call it needs to implemet that method.
+	Hence, it voilates lsp principle since facebook doesn't have all the properties and behavior of inherited class.
+	Same goes with Whatsapp where it doesn't support publishing post but needs to implement it.
+	
+Solution
+--------->
+	The solution to above problems is we have created multiple interfaces containing seperate features and the classes implement
+	only those features which they need to.

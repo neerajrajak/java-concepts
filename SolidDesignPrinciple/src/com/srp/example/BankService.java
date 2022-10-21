@@ -1,4 +1,4 @@
-package com.solid.example;
+package com.srp.example;
 
 public class BankService {
 
