@@ -1,0 +1,9 @@
+
+Consider an example of payment type while doing make payment in our screen.
+User have an option to select payment via multiple types.
+- Direct Payment
+- through loan
+- corporate card
+- bnpl card
+
+Each Payment method as a different implementation and these implementations are decided during runtime

@@ -1,0 +1,10 @@
+
+- Observer pattern basically has an Observable and Observer
+- Observable maintains some states and Observers are the one who are subscribed to observables.
+- Whenever a state of an Observable changes all its Observers are notified that the state is changed and
+do the action accordingly
+
+Live Examples -
+    Publisher Subscriber coding in java - RabbitMQ, Kafka
+    Subjects in Angular
+    Redux framework
