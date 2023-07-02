@@ -1,0 +1,21 @@
+
+Proxy design pattern falls under the category of structural design that represents the functionality of other classes.
+This pattern lets the developers provide a substitute for another object.
+This is called a proxy object.
+This helps to control the access to the original object and allows us to perform many tasks before or after the request reaches the original object.
+
+Use Cases =>
+    - Restrict access on secure resources
+    - Prevent calling heavy resources again and again and return its proxies(caching)
+    - Do some preprocessing and post processing while working on actual objects.
+
+    Spring beans internally stores a proxies of beans.
+
+Examples =>
+
+=>  A real world example can be a cheque or credit card is a proxy for what is in our bank account.
+    It can be used in place of cash, and provides a means of accessing that cash when required.
+    And that’s exactly what the Proxy pattern does – “Controls and manage access to the object they are protecting“.
+
+=>  A very simple example of Proxy is, for example, when the company you work for wants to block certain websites.
+    They use Proxy to intercept non-work related sites.
