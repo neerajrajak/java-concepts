@@ -1,4 +1,9 @@
 
+-Observer design pattern is useful when you are interested in the state of an object and want to get notified
+whenever there is any change.
+-In observer pattern, the object that watch on the state of another object are called Observer and
+the object that is being watched is called Subject/Observable.
+
 - Observer pattern basically has an Observable and Observer
 - Observable maintains some states and Observers are the one who are subscribed to observables.
 - Whenever a state of an Observable changes all its Observers are notified that the state is changed and
@@ -8,3 +13,59 @@ Live Examples -
     Publisher Subscriber coding in java - RabbitMQ, Kafka
     Subjects in Angular
     Redux framework
+
+
+
+ interfaces
+ 	-> Observer
+ 		interface Observer{
+ 			void update()
+ 		}
+
+ 	Can have multiple concrete classes like below
+ 		class EmailAlertObserver implement Observer{
+ 			public String emailId;
+ 			public Observable stockObservable;  // here Observable is a product like iphone which we observer is intrested in
+
+ 			public EmailAlertObserver(String emailId, Observable stockObservable){
+ 				this.emailId = emailId;
+ 				this.stockObservable = stockObservable;
+ 			}
+
+ 			public void update(){
+ 				logic to send update to its observers;
+ 				syso('hey '+ emailId,'+ ' Iphone arrived', )
+ 			}
+ 		}
+
+ 	-> Observable
+ 		interface Observable(){
+ 			public void addObserver();
+ 			public void removeObserver();
+ 			notify();
+ 			public void setNewUpdate(int count);
+ 		}
+
+ 	Here Observable has concrete class like
+
+ 		class StockObservable implements Observable(){
+ 			List<Observers> userRegistered = new ArrayList<>();
+
+ 			public void addObserver(Observer obs){
+ 				userRegistered.add(obs)
+ 			}
+
+ 			public void removeObserver(Observer obs){
+ 				userRegistered.remove(obs)
+ 			}
+
+ 			public void setNewUpdate(int count){
+ 				if(count > 0){
+ 					notify();
+ 				}
+ 			}
+
+ 			public notify(){
+ 				userRegistered.forEach((user)=> user.update());
+ 			}
+ 		}
