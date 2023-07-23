@@ -1,4 +1,4 @@
-package learn.multithread;
+package learn.multithread.executors;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

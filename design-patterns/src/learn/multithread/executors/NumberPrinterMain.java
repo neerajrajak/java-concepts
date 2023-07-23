@@ -1,4 +1,6 @@
-package learn.multithread;
+package learn.multithread.executors;
+
+import learn.multithread.NumberPrinter;
 
 public class NumberPrinterMain {
 

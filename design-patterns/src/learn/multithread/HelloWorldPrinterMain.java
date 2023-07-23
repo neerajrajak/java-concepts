@@ -4,7 +4,8 @@ public class HelloWorldPrinterMain {
 
     public static void main(String[] args) {
         System.out.println("Hello World from: "+ Thread.currentThread().getName());
-
+        System.out.println("Thread Group: "+ Thread.currentThread().getThreadGroup().getName());
+        System.out.println("Thread Group Parent: "+ Thread.currentThread().getThreadGroup().getParent().getName());
         HelloWorldPrinter hlp = new HelloWorldPrinter();
         Thread t1 = new Thread(hlp);
         Thread t2 = new Thread(hlp);

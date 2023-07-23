@@ -1,4 +1,6 @@
-package learn.multithread;
+package learn.multithread.executors;
+
+import learn.multithread.NumberPrinter;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
